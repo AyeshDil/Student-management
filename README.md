@@ -19,14 +19,21 @@ Follow the steps below to set up the project locally:
 - Laravel 11
 - MySQL or PostgreSQL for the database
 
-### Step 1: Install dependencies
+### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/AyeshDil/Student-management.git
+```
+
+### Step 2: Install dependencies
 Navigate to the project directory and install the necessary dependencies via Composer:
 
 ```bash
+cd Student-management
 composer install
 ```
 
-### Step 2: Configure the environment file
+### Step 3: Configure the environment file
 
 ```bash
 DB_CONNECTION=mysql
@@ -40,19 +47,19 @@ DB_PASSWORD=
 
 Make sure to configure other environment settings like the APP_KEY, APP_URL, and SANCTUM settings for authentication.
 
-### Step 3: Generate the application key
+### Step 4: Generate the application key
 ```bash
 php artisan key:generate
 ```
 
-### Step 4: Run database migrations
+### Step 5: Run database migrations
 Run the migrations to set up the database schema:
 
 ```bash
 php artisan migrate
 ```
 
-### Step 5: Seed the database
+### Step 6: Seed the database
 You can populate the database with some dummy data using the seeders:
 
 ```bash
@@ -60,7 +67,7 @@ php artisan db:seed
 ```
 
 
-### Step 6: Run the application
+### Step 7: Run the application
 Start the development server:
 
 ```bash
@@ -69,7 +76,7 @@ php artisan serve
 
 The application will be available at http://localhost:8000.
 
-### Step 7: Import Postman Collection
+### Step 8: Import Postman Collection
 
 You can import the provided Postman collection to test the API endpoints.
 
