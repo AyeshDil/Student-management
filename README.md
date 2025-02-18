@@ -34,6 +34,11 @@ composer install
 ```
 
 ### Step 3: Configure the environment file
+Duplicate the .env.example file to create a .env file:
+
+```bash
+cp .env.example .env
+```
 
 ```bash
 DB_CONNECTION=mysql
