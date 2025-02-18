@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "7355554a-570c-44f4-b282-c62e46d4782d",
+		"name": "Student-Management-System-Ayesh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21762515"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request POST 'http://localhost/api/students' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"new user\",\n    \"email\": \"new@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request POST 'http://localhost/api/students' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "API User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|ybLuRsRqP9R8Tlol77HBnM97477TnaaZtNAalq3B86a06973",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request POST 'http://localhost/api/students' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|LT7kKs6mLWlTVTtnmmiT4LVqiq7TK8ufIRRb5VX227bcb4db",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request POST 'http://localhost/api/students' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|lwz2sXoIXrPrbSHAdNLp3JHQylawd2odssqbG0uw61f5a718",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/students/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|lwz2sXoIXrPrbSHAdNLp3JHQylawd2odssqbG0uw61f5a718",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/students/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request GET 'http://localhost/api/students' \\\n--header 'Content-Type: application/json'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|lwz2sXoIXrPrbSHAdNLp3JHQylawd2odssqbG0uw61f5a718",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request POST 'http://localhost/api/students' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"courses\": [1, 2]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|lwz2sXoIXrPrbSHAdNLp3JHQylawd2odssqbG0uw61f5a718",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe Updated\",\n    \"email\": \"john.doe.updated@example.com\",\n    \"courses\": [2, 3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/students/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"13"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request PUT 'http://localhost/api/students/1' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe Updated\",\n    \"email\": \"john.doe.updated@example.com\",\n    \"courses\": [2, 3]\n}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|lwz2sXoIXrPrbSHAdNLp3JHQylawd2odssqbG0uw61f5a718",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/students/search?name=aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "aa"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location --request PUT 'http://localhost/api/students/1' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"name\": \"John Doe Updated\",\n    \"email\": \"john.doe.updated@example.com\",\n    \"courses\": [2, 3]\n}'\n"
+			},
+			"response": []
+		}
+	]
+}
